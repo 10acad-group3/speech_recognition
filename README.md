@@ -15,3 +15,4 @@ In this project we are going to build deep learning model  to process and conver
 2. [Elias Andualem](https://github.com/eandualem)
 3. [Ethani Caphace](https://github.com/Caphace-Ethan)
 4. [Behigu Gizachew](https://github.com)
+5. [Michael Tekle Woji](https://github.com/maxi1571)
