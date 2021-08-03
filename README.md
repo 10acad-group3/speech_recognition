@@ -12,3 +12,4 @@ In this project we are going to build deep learning model  to process and conver
 
 ## Contributoes
 1. [Natnael Sisay](https://github.com/NatnaelSisay)
+2. [Elias Andualem](https://github.com/eandualem)
