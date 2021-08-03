@@ -10,3 +10,5 @@ In this project we are going to build deep learning model  to process and conver
 - [Scripts](#scripts)
 - [Technologies used](#technologies-used)
 
+## Contributoes
+1. [Natnael Sisay](https://github.com/NatnaelSisay)
