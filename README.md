@@ -70,3 +70,4 @@ Description about the types of data we have in this folder, their type and purpo
 3. [Ethani Caphace](https://github.com/Caphace-Ethan)
 4. [Behigu Gizachew](https://github.com)
 5. [Michael Tekle Woji](https://github.com/maxi1571)
+6. [Fumbani Banda](https://github.com/deadex-ng)
