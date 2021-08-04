@@ -46,22 +46,22 @@ Description about the types of data we have in this folder, their type and purpo
 
 ### Notebooks
 
-```1.0 preprocessing.ipynb``` : explain 
-```2.0 acoustic_modeling.ipynb```: explain
-```3.0 speech_recognition.ipynb```: explain
+- ```1.0 preprocessing.ipynb``` : explain 
+- ```2.0 acoustic_modeling.ipynb```: explain
+- ```3.0 speech_recognition.ipynb```: explain
 
 ### Scripts
-```clean_audio.py ``` : explain
-```config.py ```: explian
-```file_handler.py ```: explain
-```log.py```: explain
-```script.py```: explain
+- ```clean_audio.py ``` : explain
+- ```config.py ```: explian
+- ```file_handler.py ```: explain
+- ```log.py```: explain
+- ```script.py```: explain
 
 ### Technologies used
-[DVC](https://dvc.org/) : For Data Storage
-[MLflow](https://www.mlflow.org/): Model training and visualization
-[CML](https://github.com/iterative/cml): Showing model result and usefull information during pull requests
-[Streamlit](https://streamlit.io/): Display Web interface and dashboard
+- [DVC](https://dvc.org/) : For Data Storage
+- [MLflow](https://www.mlflow.org/): Model training and visualization
+- [CML](https://github.com/iterative/cml): Showing model result and usefull information during pull requests
+- [Streamlit](https://streamlit.io/): Display Web interface and dashboard
 
 
 ## Contributors
