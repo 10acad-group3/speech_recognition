@@ -35,7 +35,7 @@ class TestCountOccurence(unittest.TestCase):
         """
         Provide an assertion level for arg input
         """
-        self.assertRaises(TypeError, count_occurence, True)
+        self.assertRaises(TypeError, count_occurence, False)
 
 if __name__ == '__main__':
     unittest.main()
