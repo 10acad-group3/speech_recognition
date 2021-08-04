@@ -16,5 +16,7 @@ jobs:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Post reports as comments in GitHub PRs
-          cat 'CML on progress' >> report.md
+          touch 'model_result.txt'
+          echo $(date) Model Training CML. >> model_result.txt
+          cat model_result.txt >> report.md
           cml-send-comment report.md
