@@ -16,7 +16,4 @@ env
 mlruns/
 *.tmp
 /data/*.csv
-models/RandomForestRegressor*
-models/XGBRegressor*
-models/XGBRegressor*
-/data/AMHARIC
+/data/AMHARIC/
