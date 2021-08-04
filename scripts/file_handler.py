@@ -29,7 +29,7 @@ class FileHandler():
     train_text = self.read_text(PATH_TRAIN_TEXT)
     test_text = self.read_text(PATH_TEST_TEXT)
 
-    test_text.extend(train_text)
+    train_text.extend(test_text)
     train_labels.extend(test_labels)
 
     new_text = []
@@ -42,4 +42,3 @@ class FileHandler():
         new_labels.append(result[0])
 
     return new_text, new_labels
-
