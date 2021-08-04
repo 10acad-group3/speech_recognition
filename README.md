@@ -42,25 +42,33 @@ streamlit run app.py
 ```
 
 ### Data
-Description about the types of data we have in this folder, their type and purpose.
+The folder is being tarcked with DVC and the files are only shown after cloning and setting up locally. The sub-folder ```AMHARIC``` contain ```training``` and ```testing``` files for our model. Both files contain similar file structure.
+
+- **```wav/```** : a folder containing all audio files
+- **```text```** : file contining the metadata (audio file name and cropsonding transcription)
+- **```spk2utt```** :
+- **```trsTest.txt```** : 
+- **```utt2spk```** :
+- **```wav.scp```** : 
+
 
 ### Notebooks
 
-- ```1.0 preprocessing.ipynb``` : explain 
-- ```2.0 acoustic_modeling.ipynb```: explain
-- ```3.0 speech_recognition.ipynb```: explain
+- ```1.0 preprocessing.ipynb``` : Notebook file showing **metada-generation**, **new features**, **Data exploration**, **Removing outliers**, **Clean audio** and **clean text **
+- ```2.0 acoustic_modeling.ipynb```: On progress ...
+- ```3.0 speech_recognition.ipynb```: On progress ...
 
 ### Scripts
-- ```clean_audio.py ``` : explain
-- ```config.py ```: explian
-- ```file_handler.py ```: explain
-- ```log.py```: explain
-- ```script.py```: explain
+- **```clean_audio.py ```** : Helper class for cleaning audio files
+- **```config.py ```**: Project configration and file paths
+- **```file_handler.py ```**: Helper class for reading files
+- **```log.py```**: Helper class for logging
+- **```script.py```**: Utility functions
 
 ### Technologies used
-- [DVC](https://dvc.org/) : For Data Storage
+- [DVC](https://dvc.org/) : Remote Data Storage
 - [MLflow](https://www.mlflow.org/): Model training and visualization
-- [CML](https://github.com/iterative/cml): Showing model result and usefull information during pull requests
+- [CML](https://github.com/iterative/cml): Display Model result and usefull information during pull requests
 - [Streamlit](https://streamlit.io/): Display Web interface and dashboard
 
 
