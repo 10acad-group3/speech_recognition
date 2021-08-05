@@ -23,11 +23,11 @@ class AudioVis():
     librosa.display.waveplot(signal, sr=sr)
     plt.show()
 
-  def get_wc(self, df, stop_words):
+  def get_wc(self, df, column, stop_words):
     plt.figure(figsize=(30, 20))
     wordcloud = WordCloud(font_path='../fonts/NotoSansEthiopic-Medium.ttf', max_words=5000,
                           background_color="salmon", width=3000, height=2000, colormap='Pastel1',
-                          collocations=False, stopwords=stop_words).generate(' '.join(df.text.values))
+                          collocations=False, stopwords=stop_words).generate(' '.join(df[column].values))
     plt.imshow(wordcloud)
     plt.axis('off')
     plt.title('Most Frequent Words In Amharic Audio Transcription', fontsize=16)
