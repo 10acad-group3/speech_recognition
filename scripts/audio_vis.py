@@ -11,3 +11,5 @@ class AudioVis():
   def play_audio(self, samples, sample_rate):
     return ipd.Audio(samples, rate=sample_rate)
 
+  def wav_plot(self, signal, sr=8000):
+    return librosa.display.waveplot(signal, sr=sr)
