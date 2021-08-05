@@ -42,3 +42,7 @@ class FileHandler():
         new_labels.append(result[0])
 
     return new_text, new_labels
+
+  def read_audio_signal(self, audio_file_loc, sr=22000):
+    samples, sample_rate = librosa.load(audio_file_loc, sr=sr)
+    return (samples, sample_rate)
