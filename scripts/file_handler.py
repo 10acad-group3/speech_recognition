@@ -6,6 +6,12 @@ from log import get_logger
 from tqdm import tqdm
 import librosa
 import os
+import numpy as np
+from clean_audio import CleanAudio
+
+
+PATH_TRAIN_WAV = "../data/AMHARIC/train/wav/"
+PATH_TEST_WAV = "../data/AMHARIC/test/wav/"
 
 
 class FileHandler():
@@ -14,6 +20,7 @@ class FileHandler():
 
   def __init__(self):
     self.logger = get_logger("FileHandler")
+    self.clean_audio = CleanAudio()
 
   def read_text(self, text_path):
     text = []
@@ -46,3 +53,28 @@ class FileHandler():
   def read_audio_signal(self, audio_file_loc, sr=22000):
     samples, sample_rate = librosa.load(audio_file_loc, sr=sr)
     return (samples, sample_rate)
+
+  def save_audio_as_numpy(self, df, sr):
+    allFiles = []
+    for index, row in df.iterrows():
+      if(row["category"] == "Train"):
+        allFiles.append(PATH_TRAIN_WAV + row["key"] + ".wav")
+      else:
+        allFiles.append(PATH_TEST_WAV + row["key"] + ".wav")
+
+    count = 0
+    for file in tqdm(allFiles):
+      try:
+        wav, rate = librosa.load(file, sr=None)
+        y = librosa.resample(wav, rate, sr)
+
+        y = self.clean_audio.normalize_audio(y)
+        y = self.clean_audio.split_audio(y, 30)
+        np.save(file.strip('.wav') + '.npy', y)
+        os.remove(file)
+        if((count % 1000) == 0):
+          print(f"Done: {(count/len(allFiles)*100):.2f}%")
+        count += 1
+
+      except EOFError as e:
+        pass
