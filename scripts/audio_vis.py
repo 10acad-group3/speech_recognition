@@ -18,9 +18,12 @@ class AudioVis():
   def play_audio(self, samples, sr=22000):
     return ipd.Audio(samples, rate=sr)
 
-  def wav_plot(self, signal, sr=22000):
-    plt.figure(figsize=(24, 4))
+  def wav_plot(self, signal, title, x_label, y_label, sr=22000):
+    plt.figure(figsize=(25, 5))
     librosa.display.waveplot(signal, sr=sr)
+    plt.title(title)
+    plt.ylabel(x_label)
+    plt.xlabel(y_label)
     plt.show()
 
   def get_wc(self, df, column, stop_words):

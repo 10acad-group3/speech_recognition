@@ -1,4 +1,3 @@
-from _typeshed import Self
 import os
 import sys
 import librosa
@@ -23,10 +22,10 @@ class CleanAudio():
     signal, index = librosa.effects.trim(signal, top_db=trim_db)
     return signal
 
-  def clean_audio(self, signal, clean_db=None):
+  def split_audio(self, signal, clean_db=None):
     yt = librosa.effects.split(signal, top_db=clean_db)
     clean_signal = []
     for start_i, end_i in yt:
       clean_signal.append(signal[start_i: end_i])
     signal = np.concatenate(np.array(clean_signal), axis=0)
-    return clean_signal
+    return signal
