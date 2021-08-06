@@ -12,8 +12,8 @@ requirements = ['pandas>=1.1.0', 'numpy>=1.19.0', ]
 test_requirements = ['pytest>=3', ]
 
 setup(
-    author="rssebudandi",
-    email="rssebudandi@gmail.com",
+    author="10academy-Group3",
+    email="",
     python_requires='>=3.6',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
@@ -22,7 +22,7 @@ setup(
       
         'Programming Language :: Python :: 3.8',
     ],
-    description=" solution to TellCo assignment",
+    description="Amharic Speech Recognition",
     install_requires=requirements,
     long_description=readme,
     include_package_data=True,
@@ -31,7 +31,7 @@ setup(
     packages=find_packages(include=['scripts', 'scripts.*']),
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/10xac/PythonPackageStructure',
+    url='https://github.com/10acad-group3/speech_recognition.git',
     version='0.1.0',
     zip_safe=False,
 )
