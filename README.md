@@ -47,7 +47,7 @@ The folder is being tarcked with DVC and the files are only shown after cloning 
 - **```wav/```** : a folder containing all audio files
 - **```text```** : file contining the metadata (audio file name and cropsonding transcription)
 - **```spk2utt```** :
-- **```trsTest.txt```** : 
+- **```trsTest.txt```** : file containing audio file id and it's corresponding transcription
 - **```utt2spk```** :
 - **```wav.scp```** : 
 
