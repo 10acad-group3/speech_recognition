@@ -65,6 +65,8 @@ The folder is being tarcked with DVC and the files are only shown after cloning 
 - **```log.py```**: Helper class for logging
 - **```script.py```**: Utility functions
 
+### Tests
+
 ### Technologies used
 - [DVC](https://dvc.org/) : Remote Data Storage
 - [MLflow](https://www.mlflow.org/): Model training and visualization
