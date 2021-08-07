@@ -45,7 +45,7 @@ streamlit run app.py
 The folder is being tarcked with DVC and the files are only shown after cloning and setting up locally. The sub-folder ```AMHARIC``` contain ```training``` and ```testing``` files for our model. Both files contain similar file structure.
 
 - **```wav/```** : a folder containing all audio files
-- **```text```** : file contining the metadata (audio file name and cropsonding transcription)
+- **```text```** : file contining the metadata (audio file name and corresponding transcription)
 - **```spk2utt```** :
 - **```trsTest.txt```** : file containing audio file id and it's corresponding transcription
 - **```utt2spk```** :
