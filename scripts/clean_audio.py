@@ -26,4 +26,8 @@ class CleanAudio():
     for start_i, end_i in yt:
       clean_signal.append(signal[start_i: end_i])
     signal = np.concatenate(np.array(clean_signal), axis=0)
-    return clean_signal
+    return signal
+
+
+
+
