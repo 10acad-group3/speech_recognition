@@ -47,19 +47,21 @@ The folder is being tarcked with DVC and the files are only shown after cloning 
 
 - **```wav/```** : a folder containing all audio files
 - **```text```** : file contining the metadata (audio file name and cropsonding transcription)
-- **```spk2utt```** :
-- **```trsTest.txt```** : 
-- **```utt2spk```** :
-- **```wav.scp```** : 
+- **```spk2utt```**, **```trsTest.txt```**, **```utt2spk```**,  **```wav.scp```** : this are files provided with the dataset, Currently they don't have a purpose but could be used for future analysis.
 
 
 ### Notebooks
 
 - ```1.0 preprocessing.ipynb``` : Notebook file showing **metada-generation**, **new features**, **Data exploration**, **Removing outliers**, **Clean audio** and **clean text **
-- ```2.0 acoustic_modeling.ipynb```: On progress ...
-- ```3.0 speech_recognition.ipynb```: On progress ...
+- ```1.0 acoustic_modeling_v2.ipynb```: Notebook file similar to ```1.0 preprocessing.ipynb```, but contain more analysis on audio visualization and text data anlysis
+- ```2.0 outliers.ipynb```: visualize the effect of ourlier removal on features of the dataset. finally save the outlier cleaned file.
+- ```3.0 speech_recognition.ipynb```: Notebook file, showing how to Tokenize, Augument and Generate data, from outlier cleaned data.
+- ```audio_visualization``` : Google colab file showing how to visualize audio file using audio wave and spectogram.
+- ```4.0 acoustic_modeling```: on progress ...
+
 
 ### Scripts
+- **```audio_vis.py ```** : Helper class for visualizing and playing audio files
 - **```clean_audio.py ```** : Helper class for cleaning audio files
 - **```config.py ```**: Project configration and file paths
 - **```file_handler.py ```**: Helper class for reading files
