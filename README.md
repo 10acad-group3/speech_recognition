@@ -60,6 +60,7 @@ The folder is being tarcked with DVC and the files are only shown after cloning 
 
 
 ### Scripts
+- **```audio_vis.py ```** : Helper class for visualizing and playing audio files
 - **```clean_audio.py ```** : Helper class for cleaning audio files
 - **```config.py ```**: Project configration and file paths
 - **```file_handler.py ```**: Helper class for reading files
