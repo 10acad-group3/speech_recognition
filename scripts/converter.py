@@ -20,6 +20,4 @@ class Converter():
         else:
             audio = audio.set_channels(2)
         return audio
-
-
             
