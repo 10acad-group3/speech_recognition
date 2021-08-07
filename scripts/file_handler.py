@@ -67,7 +67,6 @@ class FileHandler():
         inFiles.append(PATH_TEST_WAV + row["key"] + ".wav")
         outFiles.append(CLEAN_PATH_TEST_WAV + row["key"] + ".npy")
 
-    count = 0
     for in_file, out_file in zip(tqdm(inFiles), tqdm(outFiles)):
       try:
         wav, rate = librosa.load(in_file, sr=None)
@@ -75,12 +74,8 @@ class FileHandler():
 
         y = self.clean_audio.normalize_audio(y)
         y = self.clean_audio.split_audio(y, 30)
-        print(out_file)
 
         np.save(out_file, y)
-        if((count % 1000) == 0):
-          print(f"Done: {(count/len(outFiles)*100):.2f}%")
-        count += 1
 
       except EOFError as e:
-        pass
+        self.logger = get_logger("Failed to save audio \n" + e)
