@@ -13,4 +13,8 @@ class Normalizer():
         self.audio_path = audio_path
 
     def normalize(self,audio_path):
-        
+        audio = AudioSegment.from_wav(audio_path)
+
+        norm_audio =  effects.normalize(audio)
+
+        return norm_audio
