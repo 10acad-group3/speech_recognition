@@ -12,6 +12,8 @@ from clean_audio import CleanAudio
 
 PATH_TRAIN_WAV = "../data/AMHARIC/train/wav/"
 PATH_TEST_WAV = "../data/AMHARIC/test/wav/"
+CLEAN_PATH_TRAIN_WAV = "../data/AMHARIC_CLEAN/train/wav/"
+CLEAN_PATH_TEST_WAV = "../data/AMHARIC_CLEAN/test/wav/"
 
 
 class FileHandler():
@@ -55,25 +57,29 @@ class FileHandler():
     return (samples, sample_rate)
 
   def save_audio_as_numpy(self, df, sr):
-    allFiles = []
+    inFiles = []
+    outFiles = []
     for index, row in df.iterrows():
       if(row["category"] == "Train"):
-        allFiles.append(PATH_TRAIN_WAV + row["key"] + ".wav")
+        inFiles.append(PATH_TRAIN_WAV + row["key"] + ".wav")
+        outFiles.append(CLEAN_PATH_TRAIN_WAV + row["key"] + ".npy")
       else:
-        allFiles.append(PATH_TEST_WAV + row["key"] + ".wav")
+        inFiles.append(PATH_TEST_WAV + row["key"] + ".wav")
+        outFiles.append(CLEAN_PATH_TEST_WAV + row["key"] + ".npy")
 
     count = 0
-    for file in tqdm(allFiles):
+    for in_file, out_file in zip(tqdm(inFiles), tqdm(outFiles)):
       try:
-        wav, rate = librosa.load(file, sr=None)
+        wav, rate = librosa.load(in_file, sr=None)
         y = librosa.resample(wav, rate, sr)
 
         y = self.clean_audio.normalize_audio(y)
         y = self.clean_audio.split_audio(y, 30)
-        np.save(file.strip('.wav') + '.npy', y)
-        os.remove(file)
+        print(out_file)
+
+        np.save(out_file, y)
         if((count % 1000) == 0):
-          print(f"Done: {(count/len(allFiles)*100):.2f}%")
+          print(f"Done: {(count/len(outFiles)*100):.2f}%")
         count += 1
 
       except EOFError as e:
