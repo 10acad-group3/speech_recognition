@@ -24,10 +24,10 @@ class CleanAudio():
 
   def split_audio(self, signal, clean_db=None):
     yt = librosa.effects.split(signal, top_db=clean_db)
-    clean_signal = []
+    cleaned_signal = []
     for start_i, end_i in yt:
-      clean_signal.append(signal[start_i: end_i])
-    signal = np.concatenate(np.array(clean_signal), axis=0)
+      cleaned_signal.append(signal[start_i: end_i])
+    signal = np.concatenate(np.array(cleaned_signal), axis=0)
     return signal
 
 
