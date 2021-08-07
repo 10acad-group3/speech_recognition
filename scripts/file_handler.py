@@ -6,6 +6,14 @@ from log import get_logger
 from tqdm import tqdm
 import librosa
 import os
+import numpy as np
+from clean_audio import CleanAudio
+
+
+PATH_TRAIN_WAV = "../data/AMHARIC/train/wav/"
+PATH_TEST_WAV = "../data/AMHARIC/test/wav/"
+CLEAN_PATH_TRAIN_WAV = "../data/AMHARIC_CLEAN/train/wav/"
+CLEAN_PATH_TEST_WAV = "../data/AMHARIC_CLEAN/test/wav/"
 
 
 class FileHandler():
@@ -14,6 +22,7 @@ class FileHandler():
 
   def __init__(self):
     self.logger = get_logger("FileHandler")
+    self.clean_audio = CleanAudio()
 
   def read_text(self, text_path):
     text = []
@@ -46,3 +55,27 @@ class FileHandler():
   def read_audio_signal(self, audio_file_loc, sr=22000):
     samples, sample_rate = librosa.load(audio_file_loc, sr=sr)
     return (samples, sample_rate)
+
+  def save_audio_as_numpy(self, df, sr):
+    inFiles = []
+    outFiles = []
+    for index, row in df.iterrows():
+      if(row["category"] == "Train"):
+        inFiles.append(PATH_TRAIN_WAV + row["key"] + ".wav")
+        outFiles.append(CLEAN_PATH_TRAIN_WAV + row["key"] + ".npy")
+      else:
+        inFiles.append(PATH_TEST_WAV + row["key"] + ".wav")
+        outFiles.append(CLEAN_PATH_TEST_WAV + row["key"] + ".npy")
+
+    for in_file, out_file in zip(tqdm(inFiles), tqdm(outFiles)):
+      try:
+        wav, rate = librosa.load(in_file, sr=None)
+        y = librosa.resample(wav, rate, sr)
+
+        y = self.clean_audio.normalize_audio(y)
+        y = self.clean_audio.split_audio(y, 30)
+
+        np.save(out_file, y)
+
+      except EOFError as e:
+        self.logger = get_logger("Failed to save audio \n" + e)
