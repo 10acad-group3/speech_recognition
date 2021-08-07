@@ -29,7 +29,6 @@ class FileHandler():
     with open(text_path) as fp:
       line = fp.readline()
       while line:
-        # TODO: fix spaces in in amharic text
         text.append(line)
         line = fp.readline()
     return text
@@ -79,3 +78,4 @@ class FileHandler():
 
       except EOFError as e:
         self.logger = get_logger("Failed to save audio \n" + e)
+
