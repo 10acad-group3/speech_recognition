@@ -66,6 +66,7 @@ The folder is being tarcked with DVC and the files are only shown after cloning 
 - **```script.py```**: Utility functions
 
 ### Tests
+- **```test_script.py ```** : Helper classes for unit test
 
 ### Technologies used
 - [DVC](https://dvc.org/) : Remote Data Storage
