@@ -18,7 +18,7 @@ setup(
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: 10 Academy',
-        'Natural Language :: English',
+        'Natural Language :: Ahmaric',
       
         'Programming Language :: Python :: 3.8',
     ],
