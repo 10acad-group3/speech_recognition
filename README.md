@@ -31,7 +31,7 @@ cd notebooks
 jupyter notebook
 ```
 
-- **Model Training ui (not-implimented)**
+- **Model Training ui**
 ```
 mlflow ui
 ```
