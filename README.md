@@ -73,6 +73,7 @@ The folder is being tarcked with DVC and the files are only shown after cloning 
 - [DVC](https://dvc.org/) : Remote Data Storage
 - [MLflow](https://www.mlflow.org/): Model training and visualization
 - [CML](https://github.com/iterative/cml): Display Model result and usefull information during pull requests
+- [AWS](https://aws.amazon.com/) : Computing power for model training
 - [Streamlit](https://streamlit.io/): Display Web interface and dashboard
 
 
