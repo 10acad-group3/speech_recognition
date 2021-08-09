@@ -4,7 +4,7 @@ from pathlib import Path
 class Config:
   RANDOM_SEED = 27
   ASSETS_PATH = Path("../")
-  REPO = "https://github.com/10acad-group3/speechTotext"
+  REPO = "https://github.com/10acad-group3/speech_recognition"
   DATASET_PATH = ASSETS_PATH / "data"
   FEATURES_PATH = ASSETS_PATH / "features"
   MODELS_PATH = ASSETS_PATH / "models"
