@@ -18,7 +18,7 @@ The design of this intelligent form requires selected people to install an app o
 Our responsibility is to build a deep learning model that is capable of transcribing a speech to text. The model we produce should be accurate and is robust against background noise.
 
 ### Instalation
-- **Install Required Python Moduls**
+- **Install Required Python Modules**
 ``` 
 git clone https://github.com/10acad-group3/speech_recognition
 cd speech_recognition
