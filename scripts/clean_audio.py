@@ -1,7 +1,5 @@
-import os
-import sys
-import librosa
 import numpy as np
+import librosa
 from log import get_logger
 
 
@@ -22,7 +20,7 @@ class CleanAudio():
     signal, index = librosa.effects.trim(signal, top_db=trim_db)
     return signal
 
-  def split_audio(self, signal, clean_db=None):
+  def clean_audio(self, signal, clean_db=None):
     yt = librosa.effects.split(signal, top_db=clean_db)
     cleaned_signal = []
     for start_i, end_i in yt:

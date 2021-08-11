@@ -1,3 +1,6 @@
 {
-  "cSpell.words": ["numpy"]
+  "cSpell.words": [
+    "numpy"
+  ],
+  "jupyter.jupyterServerType": "local"
 }
