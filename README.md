@@ -87,7 +87,7 @@ The folder is being tarcked with DVC and the files are only shown after cloning 
 1. [Natnael Sisay](https://github.com/NatnaelSisay)
 2. [Elias Andualem](https://github.com/eandualem)
 3. [Ethani Caphace](https://github.com/Caphace-Ethan)
-4. [Behigu Gizachew](https://github.com)
+4. [Behigu Gizachew](https://github.com/behigu)
 5. [Michael Tekle Woji](https://github.com/maxi1571)
 6. [Fumbani Banda](https://github.com/deadex-ng)
 7. [Christian ZANOU](https://github.com/Zchristian955)
