@@ -24,6 +24,22 @@ class FileHandler():
     self.logger = get_logger("FileHandler")
     self.clean_audio = CleanAudio()
 
+  def save_csv(self, df, csv_path, index=False):
+    try:
+      df.to_csv(csv_path, index=index)
+      self.logger.info("file saved as csv")
+
+    except Exception:
+      self.logger.exception("save failed")
+
+  def read_csv(self, csv_path, missing_values=[]):
+    try:
+      df = pd.read_csv(csv_path, na_values=missing_values)
+      self.logger.debug("file read as csv")
+      return df
+    except FileNotFoundError:
+      self.logger.exception("file not found")
+
   def read_text(self, text_path):
     text = []
     with open(text_path) as fp:
@@ -78,4 +94,3 @@ class FileHandler():
 
       except EOFError as e:
         self.logger = get_logger("Failed to save audio \n" + e)
-
