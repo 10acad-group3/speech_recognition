@@ -12,8 +12,10 @@ class TestAudioVis(unittest.TestCase):
 
   def setUp(self) -> pd.DataFrame:
     self.audio_vis = AudioVis()
-  
-  def 
+
+  def test_plot_raw_audio():
+    pass
+
 
 if __name__ == '__main__':
   unittest.main()
