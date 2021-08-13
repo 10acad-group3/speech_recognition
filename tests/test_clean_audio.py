@@ -21,6 +21,9 @@ class TestCleanAudio(unittest.TestCase):
   def test_split_audiosplit_audio():
     pass
 
+  def test_all():
+    pass
+
 
 if __name__ == '__main__':
   unittest.main()
