@@ -1,4 +1,4 @@
-from clean_audio import CleanAudio
+from file_handler import FileHandler
 import os
 import sys
 import unittest
@@ -7,21 +7,21 @@ import pandas as pd
 sys.path.append(os.path.abspath(os.path.join('../scripts')))
 
 
-class TestCleanAudio(unittest.TestCase):
+class TestFileHandler(unittest.TestCase):
 
   def setUp(self):
-    self.clean_audio = CleanAudio()
+    self.file_handler = FileHandler()
 
-  def test_normalize_audio():
+  def test_read_text():
     pass
 
-  def test_trim_audio():
+  def test_read_data():
     pass
 
-  def test_split_audiosplit_audio():
+  def test_read_audio_signal():
     pass
 
-  def test_all():
+  def test_save_audio_as_numpy():
     pass
 
 
