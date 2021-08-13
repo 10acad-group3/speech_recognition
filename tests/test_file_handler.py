@@ -21,6 +21,9 @@ class TestFileHandler(unittest.TestCase):
   def test_read_audio_signal():
     pass
 
+  def test_save_audio_as_numpy():
+    pass
+
 
 if __name__ == '__main__':
   unittest.main()
