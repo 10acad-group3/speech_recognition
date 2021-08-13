@@ -12,6 +12,9 @@ class TestCleanAudio(unittest.TestCase):
   def setUp(self):
     self.clean_audio = CleanAudio()
 
+  def test_normalize_audio():
+    pass
+
 
 if __name__ == '__main__':
   unittest.main()
