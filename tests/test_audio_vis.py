@@ -16,6 +16,9 @@ class TestAudioVis(unittest.TestCase):
   def test_plot_raw_audio():
     pass
 
+  def test_plot_mfcc_feature():
+    pass
+
 
 if __name__ == '__main__':
   unittest.main()
