@@ -15,6 +15,9 @@ class TestFileHandler(unittest.TestCase):
   def test_read_text():
     pass
 
+  def test_read_data():
+    pass
+
 
 if __name__ == '__main__':
   unittest.main()
