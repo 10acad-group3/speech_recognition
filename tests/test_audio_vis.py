@@ -22,6 +22,9 @@ class TestAudioVis(unittest.TestCase):
   def test_plot_spectrogram_feature():
     pass
 
+  def test_get_wc():
+    pass
+
 
 if __name__ == '__main__':
   unittest.main()
