@@ -18,6 +18,9 @@ class TestFileHandler(unittest.TestCase):
   def test_read_data():
     pass
 
+  def test_read_audio_signal():
+    pass
+
 
 if __name__ == '__main__':
   unittest.main()
