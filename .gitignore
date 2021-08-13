@@ -16,7 +16,8 @@ env
 mlruns/
 *.tmp
 /data/*.csv
-models/RandomForestRegressor*
-models/XGBRegressor*
-models/XGBRegressor*
-/data/AMHARIC
+/data/AMHARIC/
+/data/AMHARIC_CLEAN/
+/.dvc/config.local
+/.dvc/tmp
+/.dvc/cache
