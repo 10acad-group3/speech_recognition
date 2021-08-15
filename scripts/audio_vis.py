@@ -10,8 +10,10 @@ from IPython.display import Image
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import librosa.display
 
-
 class AudioVis():
+  """Visualisation of the audio file, spectogram, mfcc....
+  """
+  
   def __init__(self):
     self.logger = get_logger("FileHandler")
 
