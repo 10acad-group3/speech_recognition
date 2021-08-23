@@ -93,5 +93,3 @@ The folder is being tarcked with DVC and the files are only shown after cloning 
 7. [Christian ZANOU](https://github.com/Zchristian955)
 8. [Robert Ssebudandi](https://github.com/rssebudandi)
 
-
-![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=10acad-group3&show_icons=true)
