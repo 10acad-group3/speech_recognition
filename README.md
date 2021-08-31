@@ -10,6 +10,7 @@ In this project we are going to build deep learning model to process and convert
 - [Notebooks](#notebooks)
 - [Scripts](#scripts)
 - [Technologies used](#technologies-used)
+- [Contributors](#contributors)
 
 ### Introduction
 
